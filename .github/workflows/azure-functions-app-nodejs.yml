@@ -53,3 +53,7 @@ jobs:
       uses: montudor/action-zip@v1
       with:
         args: zip -qq -r src.zip ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+
+    - name: 'Run ZIP deploy'
+      run: |
+        curl -v -X POST -u ${{ secrets.AZF_SCM_DEPLOYMENT_USER }} --data-binary "@src.zip" https://${{ secrets.AZF_SCM_GATEWAY_URL }}/api/zipdeploy
