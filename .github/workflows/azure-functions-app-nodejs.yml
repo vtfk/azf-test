@@ -52,4 +52,4 @@ jobs:
     - name: 'Zip files'
       uses: montudor/action-zip@v1
       with:
-        args: zip -qq -r src.zip './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
+        args: zip -qq -r src.zip hello
