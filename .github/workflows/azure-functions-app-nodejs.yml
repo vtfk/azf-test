@@ -22,7 +22,7 @@ name: Deploy Node.js project to Azure Function App
 
 on:
   push:
-    branches: ["main"]
+    branches: ["mainman"]
 
 env:
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'       # set this to the path to your function app project, defaults to the repository root
